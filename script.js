@@ -101,7 +101,8 @@ let words = [
     "nodes",
     "param",
     "radix",
-    "crack"
+    "crack",
+    "count"
 ];
 
 let board = new Array(6); // 5x6 array filled with 0
