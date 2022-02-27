@@ -1,6 +1,6 @@
 # Hackle
  
-Hackle is a word guessing game inspired on the world famous [Wordl](https://www.nytimes.com/games/wordle/index.html).
+Hackle is a word guessing game inspired on the world famous [Wordle](https://www.nytimes.com/games/wordle/index.html).
 The only twist is that all possible words are related in some way to Computer Science. Our game also has a *Hack*
 feature which, following the thematic of the game, allows the user to have an extra guess.
 
