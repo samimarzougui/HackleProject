@@ -143,8 +143,6 @@ function typeKeyGuess(key) {
         return;
     }
     board[y][x] = key;
-    console.log(key);
-    console.log(y + 1);
     let row = document.getElementById("row" + (y + 1));
     let cell = row.getElementsByClassName("tile")[x];
     cell.innerHTML = key;
@@ -154,7 +152,6 @@ function typeKeyGuess(key) {
 function keyClickedHandler(e) {
     e.target.blur();
     let key = e.target.innerHTML;
-    console.log(key);
     key = key.toLowerCase();
     if (key == "enter") {
         handleEnter();
@@ -168,7 +165,6 @@ function keyClickedHandler(e) {
     typeKeyGuess(key);
 }
 function keyTypedHandler(e) {
-    console.log(e.keyCode);
     let key = e.key;
     key = key.toLowerCase();
 
@@ -196,7 +192,6 @@ function handleEnter() {
     for (let i = 0; i < 5; i++) {
         theGuess += board[y][i];
     }
-    console.log(theGuess);
     if (theGuess === theAnswer) {
         goodGuess();
         notifyWinner();
@@ -257,7 +252,6 @@ function handleEnter() {
 
 
 function goodGuess() {
-    console.log("HELLOOOO");
     for (let i = 0; i < board[0].length; i++) {
         let row = document.getElementById("row" + (y + 1));
         let cell = row.getElementsByClassName("tile")[i];
@@ -276,7 +270,6 @@ function notifyWinner() {
 }
 
 function handleBackspace() {
-    console.log("dude");
     if (x == 0) {
         return;
     }
