@@ -182,9 +182,8 @@ function keyTypedHandler(e) {
         typeKeyGuess(key);
     }
 }
-
+let winner = false;
 function handleEnter() {
-    let winner = false;
     if (x != board[0].length) {
         return;
     }
@@ -283,6 +282,13 @@ let clickedHack = false;
 function clickedHackButton(e) {
     e.target.blur();
 
+    if (winner) {
+        alert("You already won, no need to hack!");
+    }
+    if (y >= board[0].length) {
+        alert("Too late to hack, you are out of guesses!");
+        return;
+    }
     if (y == 0) {
         alert("You can't hack the first row!");
         return;
