@@ -284,8 +284,9 @@ function clickedHackButton(e) {
 
     if (winner) {
         alert("You already won, no need to hack!");
+        return;
     }
-    if (y >= board[0].length) {
+    if (y >= board.length) {
         alert("Too late to hack, you are out of guesses!");
         return;
     }
