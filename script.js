@@ -212,14 +212,14 @@ function handleEnter() {
                 let button = document.getElementById("key-" + theGuess.charAt(i));
                 button.style.backgroundColor = "green";
             }
-            else if (theAnswer.includes(theGuess.charAt(i))) {
+            else if (tempAnswer.join("").includes(theGuess.charAt(i))) {
                 let row = document.getElementById("row" + (y + 1));
                 let cell = row.getElementsByClassName("tile")[i];
-                cell.style.backgroundColor = "yellow";
+                cell.style.backgroundColor = "orange";
 
                 let button = document.getElementById("key-" + theGuess.charAt(i));
                 if (button.style.backgroundColor != "green") {
-                    button.style.backgroundColor = "yellow";
+                    button.style.backgroundColor = "orange";
                 }
             }
             else {
@@ -227,7 +227,10 @@ function handleEnter() {
                 let cell = row.getElementsByClassName("tile")[i];
                 cell.style.backgroundColor = "darkred";
                 let button = document.getElementById("key-" + theGuess.charAt(i));
-                button.style.backgroundColor = "darkred";
+                if (button.style.backgroundColor != "green" && 
+                    button.style.backgroundColor != "orange") {
+                    button.style.backgroundColor = "darkred";
+                }
             }
         }
     }
