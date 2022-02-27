@@ -5,28 +5,29 @@
     font-family: Consolas, monospace;
 }
 #game-screen {
-    width: 100%;
-    max-width: var(--board-width-max);
-    margin: 0 auto;
+
     height: calc(100% - var(--banner-height));
+    width: 100%;
+    background-color: black;
+    max-width: var(--board-width-max);
     display: flex;
     flex-direction: column;
-    background-color: black;
+    margin: 0 auto;
 }
 
 #board-container {
     display: flex;
     justify-content: center;
+    padding: 10px;
     align-items: center;
     flex-grow: 1;
-    padding: 10px;
 }
 
 #gameboard {
-    grid-gap: 10px;
-    padding: 10px;
     display: grid;
     box-sizing: border-box;
+    padding: 10px;
+    grid-gap: 10px;
     grid-template-rows: repeat(6, 1fr);
 }
 
@@ -37,21 +38,20 @@
 }
 
 .tile {
+    display: inline-flex;
     width: 100%;
     height: 5rem;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     font-size: 3rem;
     line-height: 4.5rem;
-    font-weight: bold;
-    vertical-align: middle;
-    box-sizing: border-box;
     color: white;
     text-transform: uppercase;
-    user-select: none;
-    border: 1px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    font-weight: bold;
     border-style: solid;
+    border: 1px;
     border-color: green;
 }
 
