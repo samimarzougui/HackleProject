@@ -1,5 +1,5 @@
 :root {
-    --banner-height : 5em;
+    --banner-height : 4em;
     --board-width-max: 31.25em;
     --keyboard-width: 50em;
     font-family: Consolas, monospace;
@@ -15,33 +15,32 @@
     margin: 0 auto;
 }
 
-#board-container {
+#gameboard-container {
     display: flex;
+    height: 55%;;
     justify-content: center;
-    padding: 10px;
-    align-items: center;
     flex-grow: 1;
+    padding: 1.5em;
 }
 
 #gameboard {
     display: grid;
     box-sizing: border-box;
-    padding: 10px;
-    grid-gap: 10px;
     grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 0.5em;
 }
 
 .row {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
+    grid-column-gap: 0.5em;
 }
 
 .tile {
     display: inline-flex;
-    width: 100%;
-    height: 5rem;
-    font-size: 3rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
     line-height: 4.5rem;
     color: white;
     text-transform: uppercase;
@@ -74,7 +73,7 @@ body {
 }
 
 #title {
-    padding-top: 20px;
+    padding-top: 0.3em;
     font-size: 2.5em;
     margin: 0;
 }
@@ -89,7 +88,7 @@ section {
     font-family: inherit;
     font-weight: bold;
     margin: 0 6px 0 0;
-    height: 60px;
+    height: 3em;
     border-radius: 5px;
     background-color: lightgray;
     color: black;
@@ -105,7 +104,6 @@ section {
     display: flex;
     width: 100%;
     margin: 0 auto 8px;
-    /* touch-action: manipulation; */
 }
 
 #keyboard {
@@ -126,14 +124,13 @@ section {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    padding-top: 50px;
-    padding-bottom: 15px;
+    padding-bottom: 1em;
 }
 
 #hack-button {
     cursor: pointer;
-    width: 12.6em;
-    height: 5em;
+    width: 7em;
+    height: 2.8em;
     background-image: url("hackbutton.png");
     background-size: contain;
     background-repeat: no-repeat;
