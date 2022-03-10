@@ -117,6 +117,7 @@ section {
 #keyboard-container {
     width: 100%;
     text-align: center;
+    touch-action: manipulation;
 }
 
 #hack-button-container {
